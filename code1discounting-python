@@ -1,0 +1,77 @@
+A=20
+B=40
+C=50
+nA=0
+nB=0
+nC=0
+(nA)=input("enter product quantity of A: ")
+nB=input("enter product quantity of B: ")
+nC=input("enter product quantity of C: ")
+
+n=int(nA)+int(nB)+int(nC)
+sumA= int(A)*int(nA)
+sumB=int(B)*int(nB)
+sumC=int(C)*int(nC)
+sum=sumA+sumB+sumC
+total1=0
+total1=0
+total2=0
+total3=0
+fee=0
+if (sum>200):
+  
+  total=int(sum)-int(sum*0.1)
+if("nA>10 or nB>10 or nC>10"):
+ if ("nA>10"):
+   sumA=sumA-sumA*0.15
+ if ("nB>10"):
+   sumB=sumB-sumB*0.15
+ if ("nC>10"):
+   sumC=sumC-sumC*0.15    
+ 
+ total1= sumA+sumB+sumC
+ 
+if("n>20"):
+ 
+ total2=sum-sum*0.1
+
+if ("n>30 and nA> 15 or nB>15 or nC> 15") :
+  
+  total3=sum-sum*0.5
+
+if total1 < total2 and total1 < total3:
+    total = total1
+if total2 < total1 and total2 < total3 :
+    total = total2
+if total3 < total1 and total3 < total2 :
+    total = total3
+
+
+
+else:
+ total=sum
+units=0
+units=n/10
+x=round(units)
+if(x<units):
+ x=x+1
+
+
+ 
+fee=int(x*5)
+print(fee)
+if("wrapped needed?:"):
+ wrap=x
+else:
+  wrap=0
+
+ 
+print("product A", nA, sumA)     
+print("product B", nB, sumB)     
+print("product C" , nC, sumC)     
+print("subtotal",sum)
+reduced= sum-total
+print("discounted amount", reduced)
+print("shipping fee",fee)
+print("wrap fee",wrap)
+print("total amount", total+fee+wrap)
